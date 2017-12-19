@@ -1,0 +1,7 @@
+UPDATE Tab_1
+        SET Tab_1.SN_Campo = 'N'
+           ,Tab_1.ST_Campo = 1
+FROM dbo.Tab_1
+     INNER JOIN dbo.Tab_2WITH (NOLOCK)
+     ON Tab_2.ID_Campo = Tab_1.ID_Campo
+WHERE Tab_2.SN_Ativo = 'S'; 
